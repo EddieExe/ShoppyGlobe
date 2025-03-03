@@ -1,0 +1,143 @@
+/* Product Details Page */
+.product-details-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #f6f7fb;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+/* Product Image */
+.product-details-image {
+  flex: 1;
+  max-width: 350px;
+}
+
+.product-details-image img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-details-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Product Info */
+.product-details-info {
+  flex: 2;
+  text-align: left;
+}
+
+.product-details-info h2 {
+  font-size: 2rem;
+  margin: 20px auto;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Price */
+.product-price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #28a745;
+  margin: 10px auto;
+}
+
+/* Category */
+.product-category {
+  font-size: 1rem;
+  color: #64748b;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* Rating */
+.product-rating {
+  color: #ffb400;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Description */
+.product-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: left;
+  gap: 15px;
+  margin: 20px auto;
+}
+
+.product-details-info .add-to-cart,
+.product-details-info .buy-now {
+  padding: 10px 20px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+  background: #84cc16;
+  color: white;
+}
+
+.add-to-cart:active {
+  background: #65a30d;
+}
+
+/* Buy Now Button */
+.buy-now {
+  background: #f97316;
+  color: white;
+}
+
+.buy-now:active {
+  background: #ea580c;
+}
+
+/* Responsive Design */
+
+/* Mobile Devices */
+@media (max-width: 476px) {
+  .product-details-container {
+    flex-direction: column;
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 10px;
+    gap: 0;
+  }
+
+  .product-details-image img{
+    height: 250px;
+  }
+
+  .product-details-info h2{
+    font-size: x-large;
+    margin: 10px auto;
+  }
+
+  .product-price {
+    font-size: 1.5rem;
+  }
+
+  .product-description {
+    font-size: 0.9rem;
+  } 
+}

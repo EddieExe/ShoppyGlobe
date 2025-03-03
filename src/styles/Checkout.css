@@ -1,0 +1,201 @@
+/* Checkout Page */
+.checkout-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Left Section (Delivery Details) */
+.checkout-form {
+  flex: 1;
+  padding: 20px;
+  background: #ecfccb;
+}
+
+.checkout-form h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Apply Box Shadow Only to Input and Textarea, Not Checkboxes/Radio */
+.checkout-form input:not([type="radio"]):not([type="checkbox"]),
+.checkout-form textarea {
+  width: 93%;
+  padding: 12px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 12px;
+  font-family: inherit;
+  background: #f7fee7;
+  color: #334155;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.checkout-form textarea {
+  height: 100px;
+  resize: none;
+}
+
+/* Payment Methods Styling */
+.checkout-form input:focus,
+.checkout-form textarea:focus {
+  outline: none;
+  border: 1px solid #84cc16;
+}
+
+/* Custom Styling for Payment Options */
+.payment-methods {
+  margin-top: 15px;
+}
+
+.payment-methods label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+}
+
+.payment-methods input[type="radio"] {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #64748b;
+  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  background: white;
+  margin-bottom: 10px
+}
+
+
+/* Show checkmark when selected */
+.payment-methods input[type="radio"]:checked {
+  background-color: #84cc16;
+  border-color: #84cc16;
+}
+
+.payment-methods input[type="radio"]:checked::after {
+  content: '✔';
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+
+/* Right Section (Order Summary) */
+.order-summary {
+  flex: 1;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.order-summary h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.order-items {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.order-item img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 5px;
+  background: #f6f7fb;
+}
+
+.total-price, .delivery-charges, .grand-total {
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+.delivery-charges {
+  font-size: 16px;
+  color: #666;
+}
+
+.grand-total {
+  font-size: x-large;
+  padding: 0px 20px;
+  color: #28A745;
+}
+
+/* Confirm Order Button (Centered) */
+.confirm-order {
+  display: block;
+  margin: 20px auto;
+  width: 45%;
+  padding: 12px;
+  font-size: large;
+  font-weight: bold;
+  color: white;
+  background: #84cc16;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.confirm-order:hover {
+  background: #8fde18;
+  transform: scale(1.05);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.confirm-order:active{
+  background: #84cc16;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .checkout-container {
+    flex-direction: column;
+  }
+
+  .order-summary {
+    margin-top: 15px;
+  }
+
+  .checkout-form,
+  .order-summary {
+    padding: 15px;
+  }
+
+  .confirm-order {
+    width: 60%;
+  }
+}
